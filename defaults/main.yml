@@ -1,0 +1,16 @@
+---
+
+# The URL from which download the samba-exporter release
+samba_exporter_release_url: "https://github.com/imker25/samba_exporter/releases/download/1.17.1-pre/samba-exporter_1.17.1-pre.ppa1.ubuntu21.10_amd64.deb"
+
+# Directory containing the downloaded samba-exporter release
+samba_exporter_local_path: "files"
+
+# samba-exporter listen address
+samba_exporter_listen_address: "127.0.0.1:9922"
+
+# samba-exporter log level
+samba_exporter_log_level: "info"
+
+# Additional command-line arguments to be added to the samba-exporter unit
+samba_exporter_additional_cli_args: ""

@@ -1,0 +1,20 @@
+---
+
+- name: Install the samba-exporter package
+  apt:
+    deb: "{{ samba_exporter_release_url }}"
+
+- name: Configure defaults file
+  template:
+    src: samba_exporter.j2
+    dest: /etc/default/samba_exporter
+    owner: root
+    group: root
+    mode: 0644
+  notify: reload systemd and restart samba_exporter
+
+- name: Start and enable the samba-exporter service
+  service:
+    name: samba_exporter
+    state: started
+    enabled: true
